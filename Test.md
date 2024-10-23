@@ -28,7 +28,7 @@
 
 # HTML file Head Tag
 
-```
+```html
 <div id="widget-container">
     <div id="header">Open Action Items</div>
 </div>
