@@ -18,15 +18,23 @@
 ## Create Project
 - zet init
 
-# Zoho CRM Widget External Hosting
+# Intializing widget
+
+## Zoho CRM Widget External Hosting
 - https://127.0.0.1:5000
 - Port number might change based on case.
 - widget.html
 
-# Start Widget from Local
+## Start Widget from Local
 - zet run
 
-# HTML file Head Tag
+# Creating Sample widget
+
+## Download required files
+- Download library folder from here 
+- Unzip and move the folders to the app folder of the current project
+
+## HTML file Head Tag
 
 ```html
 <div id="widget-container">
@@ -34,11 +42,7 @@
 </div>
 ```
 
-# Download required files
-- Download library folder from here 
-- Unzip and move the folders to the app folder of the current project
-
-# CSS and JS tag addition
+## CSS and JS tag addition
 ```html
 <head>
     <meta charset="UTF-8">
@@ -48,7 +52,7 @@
 </head>
 ```
 
-# Add Three buttons for operations
+## Add three buttons for operations
 ```html
 <div id="input-fields">
     <div id="module-select">
@@ -89,12 +93,12 @@
 </div>
 ```
 
-# Calendar Placeholder
+## Calendar Placeholder
 ```html
 <div id="calendar"></div>
 ```
 
-# Initializing the Module List
+## Initializing the Module List
 ```js
 var USER_LIST = {};
 var GROUP_LIST= {};
@@ -197,7 +201,7 @@ const CRM_MODULES = {
 };
 ```
 
-# Populate Module Dropdown
+## Populate Module Dropdown
 ```js
 function populateModuleList() {
   var moduleListDiv = document.getElementById("modules-list");
@@ -234,7 +238,7 @@ function openurl(element){
 }
 ```
 
-# Initialize JS Execution
+## Initialize JS Execution
 ```js
 ZOHO.embeddedApp.on("PageLoad",function(data)
 {
@@ -248,7 +252,7 @@ function initWidget(){
   }
 ```
 
-# Display Dropdown selection
+## Display Dropdown selection
 ```js
 function showSelection(button) {
   var dropdownContentElement = button.parentElement.querySelector(".dropdown-content");
@@ -262,7 +266,7 @@ function showSelection(button) {
 }
 ```
 
-# Hide Dropdown selection
+## Hide Dropdown selection
 ```js
 function closeSelection(button) {
     try{
@@ -279,21 +283,20 @@ function closeSelection(button) {
 }
 ```
 
-# Connection Scopes
-- ```
+## Connection Scopes
+```
 ZohoCRM.settings.user_groups.READ
 ```
 
-- ```
+```
 ZohoCRM.modules.READ
 ```
 
-- ```
+```
 ZohoCRM.users.READ
 ```
 
-
-# Initializing the User List
+## Initializing the User List
 ```js
 function populateUserList(){
     var connectionName = "crm";
@@ -348,7 +351,7 @@ ZOHO.CRM.CONFIG.getCurrentUser().then(function(data){
 ```
 
 
-# Initializing the Group List
+## Initializing the Group List
 ```js
 function populateGroupList(){
     var connectionName = "crm";
@@ -392,7 +395,7 @@ function populateGroupList(){
 populateGroupList();
 ```
 
-# Initialize Calendar
+## Initialize Calendar
 ```js
 function initCalendar(){
     var options = {
@@ -427,7 +430,7 @@ initCalendar();
 <link rel="stylesheet" href="js/calendar-js/dist/calendar.js.min.css">
 ```
 
-# Fetch required details from CRM
+## Fetch required details from CRM
 ```js
 function getSelectedUsersAndPopulateDataToCalendar(button) {
     var selectedUserIds = [];
@@ -523,7 +526,7 @@ function dateToYMD(date) {
 .then(populateDataToCalendar([CURRENT_USER.id]));
 ```
 
-# Show hide Module's Event
+## Show hide module's Event
 ```js
 function showHideModuleEvents(button){
     if(button){
@@ -539,7 +542,7 @@ function showHideModuleEvents(button){
 }
 ```
 
-# Populate Data on Calendar date change
+## Populate Data on Calendar date change
 ```js
 events : {
     onPreviousMonth : getSelectedUsersAndPopulateDataToCalendar,
@@ -549,6 +552,6 @@ events : {
 }
 ```
 
-# Reference links
+## Reference links
 - https://www.zoho.com/jp/crm/developer/docs/widgets/
 - https://help.zwidgets.com/help/latest/index.html
