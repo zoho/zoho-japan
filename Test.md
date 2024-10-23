@@ -39,7 +39,7 @@
 - Unzip and move the folders to the app folder of the current project
 
 # CSS and JS tag addition
-```
+```html
 <head>
     <meta charset="UTF-8">
     <script src="https://live.zwidgets.com/js-sdk/1.2/ZohoEmbededAppSDK.min.js"></script>
@@ -49,7 +49,7 @@
 ```
 
 # Add Three buttons for operations
-```
+```html
 <div id="input-fields">
     <div id="module-select">
         <button class="dropdown-btn action-btn btn" onclick="showSelection(this)">Modules</button>
@@ -90,12 +90,12 @@
 ```
 
 # Calendar Placeholder
-```
+```html
 <div id="calendar"></div>
 ```
 
 # Initializing the Module List
-```
+```js
 var USER_LIST = {};
 var GROUP_LIST= {};
 var CURRENT_USER = {};
@@ -198,7 +198,7 @@ const CRM_MODULES = {
 ```
 
 # Populate Module Dropdown
-```
+```js
 function populateModuleList() {
   var moduleListDiv = document.getElementById("modules-list");
   var elements = "";
@@ -235,7 +235,7 @@ function openurl(element){
 ```
 
 # Initialize JS Execution
-```
+```js
 ZOHO.embeddedApp.on("PageLoad",function(data)
 {
     initWidget();
@@ -249,7 +249,7 @@ function initWidget(){
 ```
 
 # Display Dropdown selection
-```
+```js
 function showSelection(button) {
   var dropdownContentElement = button.parentElement.querySelector(".dropdown-content");
   dropdownContentElement.style.display = "block";
@@ -263,7 +263,7 @@ function showSelection(button) {
 ```
 
 # Hide Dropdown selection
-```
+```js
 function closeSelection(button) {
     try{
         var dropdownContentElement = button.parentElement.parentElement;
@@ -286,7 +286,7 @@ function closeSelection(button) {
 
 
 # Initializing the User List
-```
+```js
 function populateUserList(){
     var connectionName = "crm";
     var requestData ={
@@ -341,7 +341,7 @@ ZOHO.CRM.CONFIG.getCurrentUser().then(function(data){
 
 
 # Initializing the Group List
-```
+```js
 function populateGroupList(){
     var connectionName = "crm";
     var requestData ={
@@ -385,7 +385,7 @@ populateGroupList();
 ```
 
 # Initialize Calendar
-```
+```js
 function initCalendar(){
     var options = {
         manualEditingEnabled: false,
@@ -413,13 +413,14 @@ function setEventTypeInCalendar(){
 
 //initWidget
 initCalendar();
+
 //head
 <script src="js/calendar-js/dist/calendar.min.js"></script>
 <link rel="stylesheet" href="js/calendar-js/dist/calendar.js.min.css">
 ```
 
 # Fetch required details from CRM
-```
+```js
 function getSelectedUsersAndPopulateDataToCalendar(button) {
     var selectedUserIds = [];
     //get users from the list 
@@ -515,7 +516,7 @@ function dateToYMD(date) {
 ```
 
 # Show hide Module's Event
-```
+```js
 function showHideModuleEvents(button){
     if(button){
         closeSelection(button);
@@ -531,7 +532,7 @@ function showHideModuleEvents(button){
 ```
 
 # Populate Data on Calendar date change
-```
+```js
 events : {
     onPreviousMonth : getSelectedUsersAndPopulateDataToCalendar,
     onNextMonth : getSelectedUsersAndPopulateDataToCalendar,
