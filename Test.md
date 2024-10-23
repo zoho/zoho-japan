@@ -1,25 +1,25 @@
-Zet initialization
+#H1 Zet initialization:
 
-Install Node and NPM
-●	npm -v
-●	node -v
+##H2 Install Node and NPM
+..* npm -v
+..*	node -v
 
 For Mac and Windows
-●	https://nodejs.org/en/download/prebuilt-installer
+..*	https://nodejs.org/en/download/prebuilt-installer
 
 For Linux
-●	sudo apt install nodejs
-●	sudo apt install npm
+..*	sudo apt install nodejs
+..*	sudo apt install npm
 
 Install ZET
-●	npm install -g zoho-extension-toolkit
-●	zet -v
+..*	npm install -g zoho-extension-toolkit
+..*	zet -v
 
 Create Project
-●	zet init
+..*	zet init
 
 Zoho CRM Widget External Hosting
-●	https://127.0.0.1:5000
+..*	https://127.0.0.1:5000
 ○	Port number might change based on case.
 ○	 
 ●	/widget.html
