@@ -280,9 +280,17 @@ function closeSelection(button) {
 ```
 
 # Connection Scopes
-```ZohoCRM.settings.user_groups.READ```
-```ZohoCRM.modules.READ```
-```ZohoCRM.users.READ```
+```
+ZohoCRM.settings.user_groups.READ
+```
+
+```
+ZohoCRM.modules.READ
+```
+
+```
+ZohoCRM.users.READ
+```
 
 
 # Initializing the User List
