@@ -2,52 +2,54 @@
 
 ## Install Node and NPM
 - npm -v
--	node -v
+- node -v
 
-For Mac and Windows
--	https://nodejs.org/en/download/prebuilt-installer
+## For Mac and Windows
+- https://nodejs.org/en/download/prebuilt-installer
 
-For Linux
--	sudo apt install nodejs
-..*	sudo apt install npm
+## For Linux
+- sudo apt install nodejs
+- sudo apt install npm
 
-Install ZET
-..*	npm install -g zoho-extension-toolkit
-..*	zet -v
+## Install ZET
+- npm install -g zoho-extension-toolkit
+- zet -v
 
-Create Project
-..*	zet init
+## Create Project
+- zet init
 
-Zoho CRM Widget External Hosting
-..*	https://127.0.0.1:5000
-○	Port number might change based on case.
-○	 
-●	/widget.html
+# Zoho CRM Widget External Hosting
+- https://127.0.0.1:5000
+- Port number might change based on case.
+- widget.html
 
-Start Widget from Local
-●	zet run
+# Start Widget from Local
+- zet run
 
-HTML file Head Tag
+# HTML file Head Tag
+
 ```
 <div id="widget-container">
     <div id="header">Open Action Items</div>
 </div>
 ```
 
-Download required files
-Download library folder from here 
-Unzip and move the folders to the app folder of the current project
+# Download required files
+- Download library folder from here 
+- Unzip and move the folders to the app folder of the current project
 
-CSS and JS tag addition
-
+# CSS and JS tag addition
+```
 <head>
     <meta charset="UTF-8">
     <script src="https://live.zwidgets.com/js-sdk/1.2/ZohoEmbededAppSDK.min.js"></script>
     <link rel="stylesheet" href="css/style.css">		
     <script src="js/script.js" defer></script>
 </head>
+```
 
-Add Three buttons for operations
+# Add Three buttons for operations
+```
 <div id="input-fields">
     <div id="module-select">
         <button class="dropdown-btn action-btn btn" onclick="showSelection(this)">Modules</button>
@@ -85,11 +87,15 @@ Add Three buttons for operations
         </div>
     </div>
 </div>
+```
 
-Calendar Placeholder
-1	<div id="calendar"></div>
+# Calendar Placeholder
+```
+<div id="calendar"></div>
+```
 
-Initializing the Module List
+# Initializing the Module List
+```
 var USER_LIST = {};
 var GROUP_LIST= {};
 var CURRENT_USER = {};
@@ -189,9 +195,10 @@ const CRM_MODULES = {
     color_border : "#9370DB"
   },
 };
+```
 
-
-Populate Module Dropdown
+# Populate Module Dropdown
+```
 function populateModuleList() {
   var moduleListDiv = document.getElementById("modules-list");
   var elements = "";
@@ -225,8 +232,10 @@ function openurl(element){
     }
     window.open(url,"_blank");
 }
+```
 
-Initialize JS Execution
+# Initialize JS Execution
+```
 ZOHO.embeddedApp.on("PageLoad",function(data)
 {
     initWidget();
@@ -237,8 +246,10 @@ ZOHO.embeddedApp.init();
 function initWidget(){
     populateModuleList();
   }
+```
 
-Display Dropdown selection
+# Display Dropdown selection
+```
 function showSelection(button) {
   var dropdownContentElement = button.parentElement.querySelector(".dropdown-content");
   dropdownContentElement.style.display = "block";
@@ -249,8 +260,10 @@ function showSelection(button) {
         element.disabled = true;
   });
 }
+```
 
-Hide Dropdown selection
+# Hide Dropdown selection
+```
 function closeSelection(button) {
     try{
         var dropdownContentElement = button.parentElement.parentElement;
@@ -264,13 +277,16 @@ function closeSelection(button) {
 
     }
 }
+```
 
-Connection Scopes
-●	ZohoCRM.settings.user_groups.READ
-●	ZohoCRM.modules.READ
-●	ZohoCRM.users.READ
+# Connection Scopes
+- ```ZohoCRM.settings.user_groups.READ```
+- ```ZohoCRM.modules.READ```
+- ```ZohoCRM.users.READ```
 
-Initializing the User List
+
+# Initializing the User List
+```
 function populateUserList(){
     var connectionName = "crm";
     var requestData ={
@@ -321,8 +337,11 @@ ZOHO.CRM.CONFIG.getCurrentUser().then(function(data){
         CURRENT_USER = data.users[0];
         populateUserList();
     });
+```
 
-Initializing the Group List
+
+# Initializing the Group List
+```
 function populateGroupList(){
     var connectionName = "crm";
     var requestData ={
@@ -363,8 +382,10 @@ function populateGroupList(){
 
 //initWidget
 populateGroupList();
+```
 
-Initialize Calendar
+# Initialize Calendar
+```
 function initCalendar(){
     var options = {
         manualEditingEnabled: false,
@@ -395,9 +416,10 @@ initCalendar();
 //head
 <script src="js/calendar-js/dist/calendar.min.js"></script>
 <link rel="stylesheet" href="js/calendar-js/dist/calendar.js.min.css">
+```
 
-
-Fetch required details from CRM
+# Fetch required details from CRM
+```
 function getSelectedUsersAndPopulateDataToCalendar(button) {
     var selectedUserIds = [];
     //get users from the list 
@@ -490,9 +512,10 @@ function dateToYMD(date) {
 
 //call functions
 .then(populateDataToCalendar([CURRENT_USER.id]));
+```
 
-
-Show hide Module's Event
+# Show hide Module's Event
+```
 function showHideModuleEvents(button){
     if(button){
         closeSelection(button);
@@ -505,15 +528,18 @@ function showHideModuleEvents(button){
     });
     CALENDAR_INSTANCE.setVisibleEventTypes(selectedModuleIds);
 }
+```
 
-Populate Data on Calendar date change
+# Populate Data on Calendar date change
+```
 events : {
     onPreviousMonth : getSelectedUsersAndPopulateDataToCalendar,
     onNextMonth : getSelectedUsersAndPopulateDataToCalendar,
          onSetDate : getSelectedUsersAndPopulateDataToCalendar,
          onEventClick : openurl
 }
+```
 
-Reference links
-●	https://www.zoho.com/jp/crm/developer/docs/widgets/
-●	https://help.zwidgets.com/help/latest/index.html
+# Reference links
+- https://www.zoho.com/jp/crm/developer/docs/widgets/
+- https://help.zwidgets.com/help/latest/index.html
