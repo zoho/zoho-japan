@@ -1,4 +1,5 @@
-const CRM_BASE_URL = "https://crm.zoho.jp/crm/org90001605376/tab/";
+const CRM_BASE_URL = "https://crm.zoho.jp/crm/xxxxxxxxxxxx/tab/";//REPLACE WITH YOUR CRM URL
+const connectionName = ""; //update with connection having appropriate scopes
 const CRM_MODULES = {
   Tasks: {
     display_name : "Tasks",
@@ -132,7 +133,6 @@ function populateModuleList() {
 }
 
 function populateUserList(){
-    var connectionName = "crm";
     var requestData ={
     "parameters" : { 
         Type : "ActiveConfirmedUsers"
@@ -177,7 +177,6 @@ function populateUserList(){
 }
 
 function populateGroupList(){
-    var connectionName = "crm";
     var requestData ={
     "parameters" : { 
         Type : "ActiveConfirmedUsers"
