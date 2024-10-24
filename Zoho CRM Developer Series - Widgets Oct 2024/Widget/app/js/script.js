@@ -1,5 +1,5 @@
 const CRM_BASE_URL = "https://crm.zoho.jp/crm/xxxxxxxxxxxx/tab/";//REPLACE WITH YOUR CRM URL
-const connectionName = ""; //update with connection having appropriate scopes
+const CONNECTION_NAME = ""; //update with connection having appropriate scopes
 const CRM_MODULES = {
   Tasks: {
     display_name : "Tasks",
@@ -141,7 +141,7 @@ function populateUserList(){
     "url" : "https://www.zohoapis.jp/crm/v7/users",
     "param_type" : 1
     };
-    ZOHO.CRM.CONNECTION.invoke(connectionName, requestData).then(function(response){
+    ZOHO.CRM.CONNECTION.invoke(CONNECTION_NAME, requestData).then(function(response){
         //if user data available
         if(response.code =="SUCCESS"){
             var data = response.details.statusMessage;
@@ -185,7 +185,7 @@ function populateGroupList(){
     "url" : "https://www.zohoapis.jp/crm/v7/settings/user_groups",
     "param_type" : 1
     };
-    ZOHO.CRM.CONNECTION.invoke(connectionName, requestData).then(function(response){
+    ZOHO.CRM.CONNECTION.invoke(CONNECTION_NAME, requestData).then(function(response){
         //if user data available
         if(response.code =="SUCCESS"){
             var data = response.details.statusMessage;
