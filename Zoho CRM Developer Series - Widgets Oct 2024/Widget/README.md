@@ -20,5 +20,15 @@ In this widget we displayed values from below modules
 ## Steps for deployment
 1. Install [zet](https://www.zoho.com/crm/developer/docs/widgets/install-cli.html) and initialize new project.
 2. Replace app folder with this [app](app/) folder files
-3. Pack the widget
-4. Deploy in Zoho CRM
+3. Update CONNECTION_NAME and CRM_BASE_URL variables with appropriate values in [script.js](app/js/script.js)
+4. If widget was planned to be deployed in others DC's apart from JP DC, please update required API endpoints as well in [script.js](app/js/script.js)
+5. Pack the widget
+6. Deploy in Zoho CRM
+
+# Enhancement plans
+1. Multi DC support without any changes in [script.js](app/js/script.js)
+2. Filtering out completed status records based on Status field - [Configuration](app/js/script.js#L3) already have required details
+3. Displaying records of all users belongs to a specific group
+4. Optimizing API calls on month change
+5. Enhancing UI
+6. Multi Language support
