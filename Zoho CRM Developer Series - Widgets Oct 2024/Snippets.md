@@ -58,7 +58,7 @@ expressApp.use(errorHandler());
 # Creating Sample widget
 
 ## Download required files
-- Download library folder from here 
+- Download library folder from [here](Widget/) 
 - Unzip and move the folders to the app folder of the current project
 
 ## HTML file Head Tag
