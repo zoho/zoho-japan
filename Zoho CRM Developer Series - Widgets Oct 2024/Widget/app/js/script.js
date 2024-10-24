@@ -1,7 +1,7 @@
 const CRM_BASE_URL = "https://crm.zoho.jp/crm/org90001605376/tab/";
 const CRM_MODULES = {
   Tasks: {
-    display_name : "Tasks_JP",
+    display_name : "Tasks",
     due_date_field: "Due_Date",
     status_field: "Status",
     completed_status : ["完了"],
@@ -14,7 +14,7 @@ const CRM_MODULES = {
     color_border : "#D3D3D3"
   },
   Calls: {
-    display_name : "Calls_JP",
+    display_name : "Calls",
     start_time_field: "Call_Start_Time",
     duration : "Call_Duration",
     status_field: "Outgoing_Call_Status",
@@ -28,7 +28,7 @@ const CRM_MODULES = {
     color_border : "#808080"
   },
   Events: {
-    display_name : "Events_JP",
+    display_name : "Events",
     start_time_field: "Start_DateTime",
     end_time_field : "End_DateTime",
     add_record_url: "Events/create",
@@ -40,7 +40,7 @@ const CRM_MODULES = {
     color_border : "#1E90FF"
   },
   Quotes: {
-    display_name : "Quotes_JP",
+    display_name : "Quotes",
     due_date_field: "Valid_Till",
     status_field: "Quote_Stage",
     completed_status : ["確定済み","失注"],
@@ -53,7 +53,7 @@ const CRM_MODULES = {
     color_border : "#CD5C5C"
   },
   Invoices: {
-    display_name : "Invoice_JP",
+    display_name : "Invoice",
     due_date_field: "Due_Date",
     status_field: "Status",
     completed_status:["納品済み","キャンセル"],
@@ -66,7 +66,7 @@ const CRM_MODULES = {
     color_border : "#2E8B57"
   },
   Purchase_Orders: {
-    display_name : "PO_JP",
+    display_name : "Purchase Order",
     due_date_field: "Due_Date",
     status_field: "Status",
     completed_status:["納品済み","キャンセル"],
@@ -79,7 +79,7 @@ const CRM_MODULES = {
     color_border : "#CD853F"
   },
   Sales_Orders: {
-    display_name : "SO_JP",
+    display_name : "Sales Order",
     due_date_field: "Due_Date",
     status_field: "Status",
     completed_status : ["到達","キャンセル"],
