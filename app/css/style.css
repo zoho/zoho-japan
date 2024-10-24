@@ -1,0 +1,99 @@
+#widget-container {
+    --zoho_blue: #226DB4;
+    --zoho_green: #089949;
+    --zoho_red: #E42527;
+    --zoho_yellow: #F9B21D;
+}
+
+#header {
+    margin: 5vh;
+    font-size: 5vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn {
+    width: 10vh;
+    padding: 1vh;
+    color: #ffffff;
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+    text-align: center;
+}
+
+.save-btn {
+    background-color: var(--zoho_green);
+}
+
+.action-btn {
+    background-color: var(--zoho_blue);
+}
+
+.cancel-btn {
+    background-color: var(--zoho_red);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f5f5f5;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: fit-content;
+    border-radius: 0.5vh;
+    overflow: hidden;
+}
+
+.dropdown-content>.btn-holder {
+    margin: 3vh auto 3vh auto;
+    width: fit-content;
+    text-align: center;
+
+}
+
+.dropdown-content>.btn-holder>.btn {
+    width: 50%;
+}
+
+.option-table{
+    width:100%;
+    min-width:15vh;
+    white-space: nowrap;
+}
+
+.module-holder {
+    padding: 3vh 3vh 0vh 3vh;
+}
+
+.add-new {
+    border-radius: 0.4vh;
+    padding: 0.5vh 1vh;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    width: 1vh;
+    height: 1vh;
+}
+
+.add-new:hover{
+    background-color: var(--zoho_blue);
+}
+
+a{
+    text-decoration: none;
+}
+
+#input-fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    margin: auto;
+}
+
+#calendar{
+    width: 90%;
+    margin: 5vh auto;
+}
+

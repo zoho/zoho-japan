@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="js/calendar-js/dist/calendar.js.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://live.zwidgets.com/js-sdk/1.2/ZohoEmbededAppSDK.min.js"></script>
+		<script src="js/calendar-js/dist/calendar.min.js"></script>
+		<script src="js/calendar-js/dist/translations/calendar.translations.ja.js"></script>
+		<script src="js/script.js" defer></script>
+	</head>
+	<body>
+		<div id="widget-container">
+			<div id="header">Open Action Items</div>
+			<div id="input-fields">
+				<div id="module-select">
+					<button class="dropdown-btn action-btn btn" onclick="showSelection(this)">Modules</button>
+					<div class="dropdown-content">
+						<div id="modules-list">
+						</div>
+						<div class="btn-holder">
+							<span class="btn save-btn" onclick="showHideModuleEvents(this)">Save</span>
+							<span class="btn cancel-btn" onclick="closeSelection(this)">Cancel</span>
+						</div>
+					</div>
+				</div>
+				<div id="group-list-section">
+					<button class="dropdown-btn action-btn btn" onclick="showSelection(this)">Groups</button>
+					<div class="dropdown-content">
+						<div id="group-list">
+						</div>
+						<div class="btn-holder">
+							<span class="btn save-btn" onclick="loadEventsForGroup(this)">Save</span>
+							<span class="btn cancel-btn" onclick="closeSelection(this)">Cancel</span>
+						</div>
+					</div>
+				</div>
+				<div id="user-list-section">
+					<button class="dropdown-btn action-btn btn" onclick="showSelection(this)">Users</button>
+					<div class="dropdown-content">
+						<div id="user-list">
+						</div>
+						<div class="btn-holder">
+							<span class="btn save-btn" onclick="getSelectedUsersAndPopulateDataToCalendar(this)">Save</span>
+							<span class="btn cancel-btn" onclick="closeSelection(this)">Cancel</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="calendar"></div>
+		</div>
+	</body>
+</html>
