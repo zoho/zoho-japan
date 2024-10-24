@@ -23,6 +23,33 @@
 ## Zoho CRM Widget External Hosting
 - https://127.0.0.1:5000
 - Port number might change based on case.
+```JS
+/*
+Copyright (c) 2017, ZOHO CORPORATION
+License: MIT
+*/
+var fs = require('fs');
+var path = require('path');
+var express = require('express');
+var bodyParser = require('body-parser');
+var errorHandler = require('errorhandler');
+var morgan = require('morgan');
+var serveIndex = require('serve-index');
+var https = require('https');
+var chalk = require('chalk');
+
+process.env.PWD = process.env.PWD || process.cwd();
+
+
+var expressApp = express();
+var port = 50002;
+
+expressApp.set('port', port);
+expressApp.use(morgan('dev'));
+expressApp.use(bodyParser.json());
+expressApp.use(bodyParser.urlencoded({ extended: false }));
+expressApp.use(errorHandler());
+```
 - widget.html
 
 ## Start Widget from Local
