@@ -4,12 +4,15 @@
 project folder
 ├── app
 │   ├── js
-│       ├── script.js
-│       └── calendar-js
-│           └── //library files  
+│   │   ├── script.js
+│   │   └── calendar-js
+│   │       └── //library files  
 │   ├── css
+│   │   └── style.css    
 │   ├── translations
+│   │   └── en.json
 │   ├── images
+│   │   └── //required image files
 │   └── widget.html
 ├── server
 │   ├── index.js
