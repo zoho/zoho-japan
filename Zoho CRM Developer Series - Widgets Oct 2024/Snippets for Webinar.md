@@ -18,8 +18,6 @@
 ## Create Project
 - zet init
 
-# Intializing widget
-
 ## Zoho CRM Widget External Hosting
 - https://127.0.0.1:5000
 - Port number might change based on case.
