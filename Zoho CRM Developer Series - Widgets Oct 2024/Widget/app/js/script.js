@@ -394,7 +394,7 @@ function initCalendar(){
             onEventClick : openurl
         }
     };
-    // Object.assign(options,__TRANSLATION_OPTIONS);
+    Object.assign(options,__TRANSLATION_OPTIONS);
     CALENDAR_INSTANCE = new calendarJs( "calendar",options);
     setEventTypeInCalendar();
 }
