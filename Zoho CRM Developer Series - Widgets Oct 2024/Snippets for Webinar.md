@@ -125,11 +125,8 @@ expressApp.use(errorHandler());
 
 ## Initializing the Module List
 ```js
-var USER_LIST = {};
-var GROUP_LIST= {};
-var CURRENT_USER = {};
-var CALENDAR_INSTANCE;
-const CRM_BASE_URL = "https://crm.zoho.jp/crm/org90001605376/tab/";
+const CRM_BASE_URL = "https://crm.zoho.jp/crm/xxxxxxxxxxxx/tab/";//REPLACE WITH YOUR CRM URL
+const CONNECTION_NAME = ""; //update with connection having appropriate scopes
 
 const CRM_MODULES = {
   Tasks: {
@@ -224,6 +221,10 @@ const CRM_MODULES = {
     color_border : "#9370DB"
   },
 };
+var USER_LIST = {};
+var GROUP_LIST= {};
+var CURRENT_USER = {};
+var CALENDAR_INSTANCE;
 ```
 
 ## Populate Module Dropdown
@@ -324,7 +325,6 @@ ZohoCRM.users.READ
 ## Initializing the User List
 ```js
 function populateUserList(){
-    var connectionName = "crm";
     var requestData ={
     "parameters" : { 
         Type : "ActiveConfirmedUsers"
@@ -333,7 +333,7 @@ function populateUserList(){
     "url" : "https://www.zohoapis.jp/crm/v7/users",
     "param_type" : 1
     };
-    ZOHO.CRM.CONNECTION.invoke(connectionName, requestData).then(function(response){
+    ZOHO.CRM.CONNECTION.invoke(CONNECTION_NAME, requestData).then(function(response){
         //if user data available
         if(response.code =="SUCCESS"){
             var data = response.details.statusMessage;
@@ -379,13 +379,12 @@ ZOHO.CRM.CONFIG.getCurrentUser().then(function(data){
 ## Initializing the Group List
 ```js
 function populateGroupList(){
-    var connectionName = "crm";
     var requestData ={
     "method" : "GET",
     "url" : "https://www.zohoapis.jp/crm/v7/settings/user_groups",
     "param_type" : 1
     };
-    ZOHO.CRM.CONNECTION.invoke(connectionName, requestData).then(function(response){
+    ZOHO.CRM.CONNECTION.invoke(CONNECTION_NAME, requestData).then(function(response){
         //if user data available
         if(response.code =="SUCCESS"){
             var data = response.details.statusMessage;
@@ -432,6 +431,7 @@ function initCalendar(){
         eventTooltipDelay : 500,
         jumpToDateEnabled : false,
     };
+    Object.assign(options,__TRANSLATION_OPTIONS);
     CALENDAR_INSTANCE = new calendarJs( "calendar",options);
     setEventTypeInCalendar();
 }
@@ -452,6 +452,7 @@ initCalendar();
 
 //head
 <script src="js/calendar-js/dist/calendar.min.js"></script>
+<script src="js/calendar-js/dist/translations/calendar.translations.ja.js"></script>
 <link rel="stylesheet" href="js/calendar-js/dist/calendar.js.min.css">
 ```
 
