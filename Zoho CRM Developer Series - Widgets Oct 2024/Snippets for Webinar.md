@@ -390,7 +390,6 @@ function populateGroupList(){
     "param_type" : 1
     };
     ZOHO.CRM.CONNECTION.invoke(CONNECTION_NAME, requestData).then(function(response){
-        //if user data available
         if(response.code =="SUCCESS"){
             var data = response.details.statusMessage;
             data.user_groups.forEach(group => {
