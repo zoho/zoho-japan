@@ -1,5 +1,5 @@
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/zoho/zoho-japan/blob/main/README.md)
-[![jp](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/zoho/zoho-japan/blob/main/README.jp.md)
+[![jp](https://img.shields.io/badge/lang-jp-green.svg)](https://github.com/zoho/zoho-japan/blob/main/README.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/zoho/zoho-japan/blob/main/README.en.md)
 
 # Zoho Japan
 
