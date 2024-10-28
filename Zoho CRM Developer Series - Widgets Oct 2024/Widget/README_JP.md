@@ -20,7 +20,7 @@
 1. [zet](https://www.zoho.com/crm/developer/docs/widgets/install-cli.html)をインストールし、新しいプロジェクトを作成します。
 2. こちらの[app](app/)フォルダー内のファイルで、既存のappフォルダーを置き換えます。
 3. [script.js](app/js/script.js)内の`CONNECTION_NAME`および`CRM_BASE_URL`の変数を、適切な値に更新します。
-4. JP DC以外のデータセンターにウィジェットを実装する場合、[script.js](app/js/script.js)内の必要なAPIエンドポイントも更新してください。
+4. JP DC以外のデータセンターにウィジェットを実装する場合、[script.js](app/js/script.js)内の必要なAPIエンドポイントも更新します。
 5. ウィジェットを.zip化します。
 6. Zoho CRMに実装します。
 
