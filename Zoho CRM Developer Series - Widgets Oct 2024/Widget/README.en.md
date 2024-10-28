@@ -1,3 +1,6 @@
+[![jp](https://img.shields.io/badge/lang-jp-green.svg)](Zoho CRM Developer Series - Widgets Oct 2024/Widget/README.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](Zoho CRM Developer Series - Widgets Oct 2024/Widget/README.en.md)
+
 # Overview
 This is an CRM widget created for visualize the various module's due records in a calendar structure.
 
