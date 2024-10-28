@@ -1,5 +1,5 @@
-[![jp](https://img.shields.io/badge/lang-jp-green.svg)](Zoho CRM Developer Series - Widgets Oct 2024/Widget/README.md)
-[![en](https://img.shields.io/badge/lang-en-red.svg)](Zoho CRM Developer Series - Widgets Oct 2024/Widget/README.en.md)
+[![jp](https://img.shields.io/badge/lang-jp-green.svg)](https://github.com/zoho/zoho-japan/blob/main/Zoho%20CRM%20Developer%20Series%20-%20Widgets%20Oct%202024/Widget/README.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/zoho/zoho-japan/blob/main/Zoho%20CRM%20Developer%20Series%20-%20Widgets%20Oct%202024/Widget/README.en.md)
 
 # 概要
 こちらは、さまざまなタブの期限レコードをカレンダー形式で可視化するために作成されたCRMウィジェットです。
