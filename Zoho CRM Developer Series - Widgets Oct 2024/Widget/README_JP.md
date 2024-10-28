@@ -1,34 +1,35 @@
-# Overview
-This is an CRM widget created for visualize the various module's due records in a calendar structure.
+# 概要
+これは、カレンダー形式でさまざまなモジュールの期限付きレコードを視覚化するためのCRMウィジェットです。
 
-In this widget we displayed values from below modules
-| Module Name | Description |
+このウィジェットでは、以下のモジュールからの値を表示します。
+
+| モジュール名 | 説明 |
 | ----------- | ----------- |
-| Tasks | Displays based on Due Date |
-| Meetings | Displays based on Start Date |
-| Calls | Displays based on Call Start Time |
-| Quotes | Displays based on Due Date |
-| Invoices | Displays based on Due Date |
-| Sales Order | Displays based on Due Date |
-| Purchase Order | Displays based on Due Date |
+| タスク | 期限日を基に表示 |
+| 会議 | 開始日を基に表示 |
+| コール | コール開始時間を基に表示 |
+| 見積書 | 期限日を基に表示 |
+| 請求書 | 期限日を基に表示 |
+| 受注 | 期限日を基に表示 |
+| 購買発注 | 期限日を基に表示 |
 
+# デプロイ方法
 
-# How to deploy
-## Prerequisites
-- Zoho CRM Trial or Paid Edition which supports Widgets
+## 前提条件
+- ウィジェットをサポートするZoho CRMトライアル版または有料版
 
-## Steps for deployment
-1. Install [zet](https://www.zoho.com/crm/developer/docs/widgets/install-cli.html) and initialize new project.
-2. Replace app folder with this [app](app/) folder files
-3. Update CONNECTION_NAME and CRM_BASE_URL variables with appropriate values in [script.js](app/js/script.js)
-4. If widget was planned to be deployed in others DC's apart from JP DC, please update required API endpoints as well in [script.js](app/js/script.js)
-5. Pack the widget
-6. Deploy in Zoho CRM
+## デプロイ手順
+1. [zet](https://www.zoho.com/crm/developer/docs/widgets/install-cli.html)をインストールし、新しいプロジェクトを初期化します。
+2. [app](app/)フォルダのファイルとアプリフォルダを置き換えます。
+3. [script.js](app/js/script.js)内の`CONNECTION_NAME`と`CRM_BASE_URL`変数を適切な値に更新します。
+4. JP DC以外の他のDCにウィジェットをデプロイする場合は、[script.js](app/js/script.js)で必要なAPIエンドポイントも更新してください。
+5. ウィジェットをパッケージ化します。
+6. Zoho CRMにデプロイします。
 
-# Enhancement plans
-1. Multi DC support without any changes in [script.js](app/js/script.js)
-2. Filtering out completed status records based on Status field - [Configuration](app/js/script.js#L3) already have required details
-3. Displaying records of all users belongs to a specific group
-4. Optimizing API calls on month change
-5. Enhancing UI
-6. Multi Language support
+# 強化計画
+1. [script.js](app/js/script.js)を変更せずにマルチDCをサポート
+2. ステータスフィールドに基づいて完了ステータスのレコードをフィルタリング - [設定](app/js/script.js#L3)ですでに必要な詳細が提供されています
+3. 特定のグループに属する全ユーザーのレコードを表示
+4. 月の変更時にAPIコールを最適化
+5. UIの強化
+6. 多言語サポート
