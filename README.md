@@ -1,3 +1,6 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/zoho/zoho-japan/blob/main/README.md)
+[![jp](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/zoho/zoho-japan/blob/main/README.jp.md)
+
 # Zoho Japan
 
 A sample collection of Widgets which are specific to Japan region and CRM training materials.
