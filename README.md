@@ -1,14 +1,13 @@
 [![jp](https://img.shields.io/badge/lang-jp-green.svg)](https://github.com/zoho/zoho-japan/blob/main/README.md)
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/zoho/zoho-japan/blob/main/README.en.md)
 
-# Zoho Japan
+# Zoho Japan  
+日本地域に特化したウィジェットのサンプルコレクションとCRMトレーニング資料。
 
-A sample collection of Widgets which are specific to Japan region and CRM training materials.
+ビジネスはそれぞれユニークで、各社は特定のワークフローを持っています。
+Zohoでビジネスフローを管理する際に、あなたのビジネスに特有のニーズがあるかもしれません。CRMウィジェットは、そのようなニーズに対応する手助けをします。
+ここでは、さまざまなニーズに応えるカスタム関数のセットをまとめました。 
 
-Every business is unique and each of them follows a specific workflow. 
-While managing your business flow with Zoho, you might have some needs unique to your business. CRM Widgets help you address such needs.
-Here we have compiled a set of custom functions that address different needs.
-
-# Bookmarks
+# ブックマーク
 
 - [Zoho CRM Developer Series - Widgets | Oct 2024 | For partners](https://github.com/zoho/zoho-japan/tree/main/Zoho%20CRM%20Developer%20Series%20-%20Widgets%20Oct%202024)
