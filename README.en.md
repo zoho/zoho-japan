@@ -1,14 +1,20 @@
-[![jp](https://img.shields.io/badge/lang-jp-green.svg)](https://github.com/zoho/zoho-japan/blob/main/README.md)
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/zoho/zoho-japan/blob/main/README.en.md)
+[![ja](https://img.shields.io/badge/lang-ja-red.svg)](README.md)
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](README.en.md)
 
 # Zoho Japan
 
-A sample collection of Widgets which are specific to Japan region and CRM training materials.
+This repository is organized to support multiple products and multiple use cases over time.
 
-Every business is unique and each of them follows a specific workflow. 
-While managing your business flow with Zoho, you might have some needs unique to your business. CRM Widgets help you address such needs.
-Here we have compiled a set of custom functions that address different needs.
+## Repository Structure
 
-# Bookmarks
+- [common](common): Shared reusable documentation and assets used across products.
+- [crm](crm): Product-specific use cases, scripts, and documentation for CRM.
 
-- [Zoho CRM Developer Series - Widgets | Oct 2024 | For partners](https://github.com/zoho/zoho-japan/tree/main/Zoho%20CRM%20Developer%20Series%20-%20Widgets%20Oct%202024)
+## Product and Use Case Index
+
+Use this section as the main navigation entry point as new products and use cases are added.
+
+### CRM
+
+- [Populate Contact Address in Custom Module](crm/client-script/populate-contact-address-in-custom-module)
+
