@@ -16,3 +16,15 @@ When a Contact is selected in the Contact lookup field on the Create/Edit/Clone 
 - Automatically populates Shipping Address fields from the selected Contact's Mailing Address.
 - Prompts the user with a confirmation dialog before copying each address, allowing selective population.
 - Works on Create, Edit, and Clone pages of the custom module.
+
+# Screenshot
+
+![Screen 1](media/Screen-1.png)
+
+
+
+![Screen 2](media/Screen-2.png)
+
+# Related Links
+
+For setup and configuration instructions, see [configuration.en.md](configuration.en.md).
